@@ -9,6 +9,7 @@ html {
   margin: 0;
   padding: 0;
 }
+
 :root {
   --primary-text-color: #757575;
   --title-text-color: #000000;
@@ -44,10 +45,13 @@ img {
 ul {
   list-style: none;
 }
+
 body {
   font-family: Roboto, sans-serif;
 }
+
 /* Шапка */
+
 .header {
   position: fixed;
   width: 100%;
@@ -57,13 +61,16 @@ body {
   background-color: var(--add-color);
   border-bottom: 1px solid var(--line-footer);
 }
+
 .header .container {
   display: flex;
 }
+
 .nav {
   display: flex;
   align-items: baseline;
 }
+
 .logo {
   margin-right: 93px;
 
@@ -77,18 +84,23 @@ body {
   letter-spacing: 0.03em;
   text-decoration: none;
 }
+
 .logo-web {
   color: var(--accent-color);
 }
+
 .site-nav {
   display: flex;
 }
+
 .site-nav .item {
   margin-right: 40px;
 }
+
 .site-nav .item:last-child {
   margin-right: 0;
 }
+
 .site-nav-link {
   display: block;
   padding-top: 32px;
@@ -102,10 +114,12 @@ body {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic-bezier);
 }
+
 .site-nav-link:hover,
 .site-nav-link:focus {
   color: var(--accent-color);
 }
+
 .site-nav-сurrent {
   position: relative;
 
@@ -117,6 +131,7 @@ body {
 
   text-decoration: none;
 }
+
 .site-nav-сurrent::after {
   position: absolute;
   bottom: 0;
@@ -129,15 +144,18 @@ body {
   background-color: var(--accent-color);
   border-radius: 2px;
 }
+
 .contact-nav .item + .item {
   margin-left: 50px;
 }
+
 .contact-nav {
   align-items: center;
   display: flex;
 
   list-style: none;
 }
+
 .contact-nav-m,
 .contact-nav-t {
   display: flex;
@@ -158,24 +176,30 @@ body {
 .contact-nav-m:focus {
   color: var(--accent-color);
 }
+
 .contact-nav-t:hover,
 .contact-nav-t:focus {
   color: var(--accent-color);
 }
+
 .mail-icon {
   margin-right: 10px;
   color: var (--primary-text-color);
 }
+
 .mail-icon {
   fill: currentColor;
 }
+
 .tel-icon {
   margin-right: 10px;
   color: var (--primary-text-color);
 }
+
 .tel-icon {
   fill: currentColor;
 }
+
 .site-nav,
 .contact-nav {
   font-style: normal;
@@ -187,16 +211,21 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .contact-nav {
   display: flex;
   align-self: center;
   margin-left: auto;
 }
+
 /* main */
+
 .section {
   color: var(--primary-text-color);
 }
+
 /* Герой */
+
 .hero {
   max-width: 1600px;
   margin-left: auto;
@@ -217,6 +246,7 @@ body {
 
   text-align: center;
 }
+
 .hero-title {
   max-width: 696px;
   margin: 0 auto;
@@ -231,6 +261,7 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+
 .hero-button {
   border: none;
   border-radius: 4px;
@@ -249,7 +280,9 @@ body {
 
   cursor: pointer;
 }
+
 /* Модальне вікно */
+
 .backdrop {
   position: fixed;
   left: 0;
@@ -261,13 +294,16 @@ body {
   opacity: 1;
   transition: opacity 250ms var(--cubic-bezier);
 }
+
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
+
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.2);
 }
+
 .modal {
   position: absolute;
   top: 50%;
@@ -282,6 +318,7 @@ body {
   box-shadow: var(--shadow);
   border-radius: 4px;
 }
+
 .modal-button {
   display: flex;
   justify-content: center;
@@ -296,12 +333,15 @@ body {
   background-color: #ffffff;
   color: #000000;
 }
-.icon-modal {
+
+.icon-modal-close {
   fill: currentColor;
 }
+
 textarea {
   resize: none;
 }
+
 .modal-text {
   font-family: Roboto;
   font-style: normal;
@@ -312,6 +352,7 @@ textarea {
   letter-spacing: 0.03em;
   color: #212121;
 }
+
 .form {
   width: 448px;
   margin-top: 12px;
@@ -319,20 +360,26 @@ textarea {
   margin-left: auto;
   margin-right: auto;
 }
+
 .form-field {
   display: flex;
   flex-direction: column;
 }
-.form-field input {
+
+.form-imput {
+  position: relative;
   margin: 0;
   margin-bottom: 10px;
-  padding: 12px 0;
+  padding: 12px;
+  padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
 }
-.form-field input::placeholder {
+
+.form-imput::placeholder {
   color: rgba(33, 33, 33, 0.2);
 }
-.form-field label {
+
+.form-label {
   margin-bottom: 4px;
 
   font-family: Roboto;
@@ -343,6 +390,7 @@ textarea {
   letter-spacing: 0.01em;
   color: #757575;
 }
+
 .form-field textarea {
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -354,6 +402,22 @@ textarea {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
+
+.form-imput:focus {
+  color: #2196f3;
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+}
+
+/* .form-imput {
+  position: relative;
+} */
+
+.icon-modal {
+  position: absolute;
+  left: 0;
+}
+
 .form-field-policy {
   max-width: 425px;
   margin-left: auto;
@@ -368,10 +432,12 @@ textarea {
   color: #757575;
   padding-bottom: 30px;
 }
+
 .policy-link {
   text-decoration-line: underline;
   color: #2196f3;
 }
+
 .modal-btn {
   display: flex;
   margin-left: auto;
@@ -391,7 +457,9 @@ textarea {
   border: 0;
   cursor: pointer;
 }
+
 /* Особливості */
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -399,19 +467,23 @@ textarea {
   padding-left: 15px;
   padding-right: 15px;
 }
+
 .features {
   padding-top: 91px;
   padding-bottom: 94px;
 }
+
 .section-special {
   width: 270px;
   margin-top: 0;
   margin-bottom: 0;
   margin-right: 30px;
 }
+
 .section-special:last-child {
   margin-right: 0;
 }
+
 .section-feature {
   display: flex;
   margin-top: 0;
@@ -423,6 +495,7 @@ textarea {
   line-height: 1.7;
   letter-spacing: 0.03em;
 }
+
 .icon-section {
   width: 270px;
   height: 120px;
@@ -432,6 +505,7 @@ textarea {
   background-color: var(--team-color);
   border-radius: 4px;
 }
+
 .section-feature-title {
   color: var(--title-text-color);
 
@@ -447,6 +521,7 @@ textarea {
 }
 
 /* Заняття */
+
 .img-work {
   width: 1200px;
   padding-left: 15px;
@@ -455,9 +530,11 @@ textarea {
   margin-right: auto;
   padding-bottom: 114px;
 }
+
 .work {
   display: flex;
 }
+
 .section-title {
   color: var(--title-text-color);
 
@@ -470,19 +547,24 @@ textarea {
 
   margin-bottom: 50px;
 }
+
 .section-work {
   margin: 0;
   padding: 0;
 }
+
 .section-img {
   margin-right: 30px;
 }
+
 .section-img:last-child {
   margin-right: 0;
 }
+
 .img-text {
   position: relative;
 }
+
 .section-img-text {
   position: absolute;
   font-style: normal;
@@ -499,6 +581,7 @@ textarea {
   bottom: 0;
   width: 370px;
 }
+
 /* Команда */
 
 .section-color {
@@ -506,6 +589,7 @@ textarea {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
 .section-team {
   width: 1200px;
   padding-left: 15px;
@@ -520,18 +604,22 @@ textarea {
   text-align: center;
   letter-spacing: 0.03em;
 }
+
 .card-team {
   box-shadow: var(--shadow);
   background-color: var(--add-color);
   margin-right: 30px;
   border-radius: 4px;
 }
+
 .img-team {
   margin-bottom: 30px;
 }
+
 .item-team {
   padding-bottom: 30px;
 }
+
 .section-team-title {
   margin-bottom: 10px;
 
@@ -540,20 +628,25 @@ textarea {
   font-weight: 500;
   font-size: 16px;
 }
+
 .team {
   margin-right: 0;
 }
+
 .social-icons {
   display: flex;
   margin-top: 16px;
   justify-content: center;
 }
+
 .social-icons__item {
   margin-right: 10px;
 }
+
 .social-icons__item:last-child {
   margin-right: 0;
 }
+
 .social-icons__link {
   display: flex;
   align-items: center;
@@ -568,15 +661,19 @@ textarea {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic-bezier);
 }
+
 .social-icons__link:hover,
 .social-icons__link:focus {
   color: var(--add-color);
   background-color: var(--accent-color);
 }
+
 .social-icons__icon {
   fill: currentColor;
 }
+
 /* Клієнти */
+
 .section-client {
   width: 1200px;
   padding-left: 15px;
@@ -586,6 +683,7 @@ textarea {
   margin-left: auto;
   margin-right: auto;
 }
+
 .client {
   margin-bottom: 50px;
 
@@ -598,9 +696,11 @@ textarea {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
+
 .client-logo {
   display: flex;
 }
+
 .client-company {
   display: flex;
   color: var(--icon-color);
@@ -613,9 +713,11 @@ textarea {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic-bezier);
 }
+
 .client-company:last-child {
   margin-right: 0;
 }
+
 .client-company:hover,
 .client-company:focus {
   border: 1px solid var(--accent-color);
@@ -634,23 +736,29 @@ textarea {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic-bezier);
 }
+
 .company-logo:hover,
 .company-logo:focus {
   color: var(--accent-color);
 }
+
 .icon-logo {
   fill: currentColor;
 }
+
 .icon-logo:hover,
 .icon-logo:focus {
   fill: currentColor;
 }
+
 /* Футер */
+
 .footer-color {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--bg-color);
 }
+
 .footer {
   width: 1200px;
   padding-left: 15px;
@@ -659,6 +767,7 @@ textarea {
   margin-right: auto;
   color: var(--add-color);
 }
+
 .logo-footer {
   color: var(--add-color);
 
@@ -671,12 +780,15 @@ textarea {
 
   text-decoration: none;
 }
+
 .footer-address {
   margin-top: 20px;
 }
+
 .footer-item {
   padding-bottom: 9px;
 }
+
 .footer-contact-address {
   color: var(--add-color);
 
@@ -688,6 +800,7 @@ textarea {
 
   text-decoration: none;
 }
+
 .footer-contact-nav-mt {
   color: var(--footer-color);
 
@@ -699,9 +812,11 @@ textarea {
 
   text-decoration: none;
 }
+
 .network {
   margin-left: 70px;
 }
+
 .network .text {
   margin-bottom: 20px;
 
@@ -713,13 +828,16 @@ textarea {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+
 .link-network {
   display: flex;
   align-items: baseline;
 }
+
 .social-logo {
   margin-right: 10px;
 }
+
 .social {
   display: flex;
   justify-content: center;
@@ -733,25 +851,31 @@ textarea {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic-bezier);
 }
+
 .social:hover,
 .social:focus {
   background-color: var(--accent-color);
 }
+
 .social-logo:last-child {
   margin-right: 0;
 }
+
 .social {
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--add-color);
 }
+
 .icon-footer {
   fill: currentColor;
 }
+
 .mailing {
   margin-left: 93px;
 }
+
 .mailing .text {
   font-family: Roboto;
   font-style: normal;
@@ -761,13 +885,16 @@ textarea {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+
 .mail-footer {
   display: flex;
   margin-top: 20px;
 }
+
 .mail {
   margin-right: 12px;
 }
+
 .mail input {
   padding: 15px;
   width: 358px;
@@ -787,6 +914,7 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
 }
+
 .footer-btn {
   width: 200px;
   height: 50px;
@@ -809,10 +937,13 @@ textarea {
   border: 0;
   cursor: pointer;
 }
+
 .icon-send {
   fill: currentColor;
 }
+
 /* Портфоліо */
+
 .portfolio {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -830,15 +961,18 @@ textarea {
   padding-left: 15px;
   padding-right: 15px;
 }
+
 .button {
   justify-content: center;
   display: flex;
   margin: 0 0 50px 0;
   padding: 0;
 }
+
 .mg-r {
   margin-right: 8px;
 }
+
 .portfolio-button {
   border-radius: 4px;
 
@@ -861,43 +995,53 @@ textarea {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic-bezier);
 }
+
 .portfolio-button:hover,
 .portfolio-button:focus {
   background-color: var(--accent-color);
   color: var(--add-color);
   box-shadow: var(--shadow-button);
 }
+
 .flex-container {
   display: flex;
   flex-wrap: wrap;
 }
+
 .flex-element {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
 }
+
 .card {
   display: flex;
 }
+
 .flex-element:nth-child(3n) {
   margin-right: 0;
 }
+
 .flex-element:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
+
 .card-link {
   text-decoration: none;
   transition: box-shadow 250ms var(--cubic-bezier);
 }
+
 .card-link:hover,
 .card-link:focus {
   box-shadow: var(--shadow-card);
 }
+
 .card-link:hover .card-thumb-text,
 .card-link:focus .card-thumb-text {
   opacity: 0.9;
   transform: translateY(0);
 }
+
 .card-thumb {
   position: relative;
   display: flex;
@@ -905,6 +1049,7 @@ textarea {
   align-items: center;
   overflow: hidden;
 }
+
 .card-thumb-text {
   position: absolute;
 
@@ -924,6 +1069,7 @@ textarea {
   transition-timing-function: var(--cubic-bezier);
   pointer-events: none;
 }
+
 .card-thumb-text .text {
   font-family: Roboto;
   font-style: normal;
@@ -933,10 +1079,12 @@ textarea {
   letter-spacing: 0.03em;
   color: var(--add-color);
 }
+
 .card-content {
   padding: 20px 24px;
   border: 1px solid var(--card-border);
 }
+
 .card-title {
   color: var(--title-text-color);
 
@@ -946,6 +1094,7 @@ textarea {
   line-height: 36px;
   letter-spacing: 0.06em;
 }
+
 .card-text {
   margin-top: 4px;
 
