@@ -387,10 +387,8 @@ textarea {
   border-color: #2196f3;
 }
 
-.form-imput:focus + .icon-modal{
-  fill: #2196f3;
-}
 
+/* ∽ */
 .form-label {
   margin-bottom: 4px;
 
@@ -421,6 +419,7 @@ textarea {
 .comment:focus {
   outline: none;
   border-color: #2196f3;
+  color: #212121
 }
 
 .icon-modal {
@@ -428,6 +427,11 @@ textarea {
   position: absolute;
   left: 12px;
   bottom: 11px;
+  transition: fill 250ms var(--timing-function);
+}
+
+.form-imput:focus + .icon-modal{
+  fill: #2196f3;
 }
 
 .form-field-policy {
@@ -907,7 +911,9 @@ textarea {
   margin-right: 12px;
 }
 
-.mail input {
+.mail-imput-footer {
+outline: none;
+
   padding: 15px;
   width: 358px;
   height: 50px;
@@ -926,6 +932,14 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
 }
+/* 
+.mail-imput-footer:-webkit-autofill,
+.mail-imput-footer:-webkit-autofill:hover, 
+.mail-imput-footer:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.6);
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.6) inset;
+} */
 
 .footer-btn {
   width: 200px;
